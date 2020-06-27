@@ -29,13 +29,13 @@ msg['Subject'] = chosen_joke
 msg['From'] = 'YourName <you@email.com>'
 msg['To'] = 'FriendsName <friend@email.net>'
 
-#From, To (can be more than one receiver), and SMTP credentials
+#From, To, and SMTP credentials
 sender = 'you@email.com'
 receiver = 'friend@email.net'
-login = 'smtp_email_login' #most likely your full email adress
-password = 'smtp_email_password' #most likely your password
+login = 'smtp_email_login' #your login
+password = 'smtp_email_password' #your password
 
-#Sending it. If doesn't work try "smtplib.SMTP" instead of "smtplib.SMTP_SSL"
+#Sending it. If it doesn't work try "smtplib.SMTP" instead of "smtplib.SMTP_SSL"
 with smtplib.SMTP_SSL('smtp.server.com', port) as server: #port is usually 465
     server.login(login, password)
     server.sendmail(sender, receiver, msg.as_string())

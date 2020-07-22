@@ -1,3 +1,2 @@
 # got_a_joke
-Send your friend(s) a daily joke!
-Python script to email a random line from the text file.
+Send your friends a daily joke! This Python script emails a random line from the text file.
